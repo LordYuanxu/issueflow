@@ -39,6 +39,8 @@ cp ~/.agents/issueflow/config.example.md ~/.agents/issueflow-config.md
 # 编辑 issueflow-config.md 填入你的环境
 ```
 
+> 国内访问 GitHub 不畅？命令文件是纯 markdown——直接把 `commands/*.md` 的内容粘贴给任何 AI 工具即可使用，无需 clone。
+
 ### 方式三：任何其他 AI
 
 把 `commands/*.md` 内容直接粘贴给 AI，照做即可。
@@ -63,3 +65,7 @@ cp ~/.agents/issueflow/config.example.md ~/.agents/issueflow-config.md
 - 规模护栏：仓库超 ~300 条 issue+MR 自动切增量采集（规则内置于 /sync-board）
 
 详见 `skills/workflow-guide/SKILL.md`（架构与数据规范）与 `templates/`（看板初始文件模板）。
+
+## 讨论与反馈
+
+问题与建议请提 [Issues](https://github.com/LordYuanxu/issueflow/issues)。如果你用这套流程提高了效率，欢迎在 Issues 里留一句使用场景——真实案例比 Star 更能帮到后来的用户。
