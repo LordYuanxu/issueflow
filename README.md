@@ -1,4 +1,7 @@
-# dev-workflow
+# issueflow
+
+> **一句话需求，AI 建卡开发合并，进度自动写进你的笔记。**
+> Speak your requirements. Agents ship them as issues, branches & merged MRs. Your notes stay in sync.
 
 Issue 驱动开发流水线：**一句话需求 → spec → GitLab issue → 分支/MR → Obsidian 看板**。数据单向流动，分支与任务卡一一对应，进度每天自动回流到你的笔记。
 
@@ -26,14 +29,14 @@ Obsidian 看板：issue/MR 笔记 + Bases 动态视图 + 增量简报
 
 ### 方式一：ZCode / Claude Code 插件
 
-设置 → 插件市场 → "+" → 添加本仓库 Git URL → 安装 `dev-workflow`。
+设置 → 插件市场 → "+" → 添加本仓库 Git URL → 安装 `issueflow`。
 
 ### 方式二：跨工具（.agents 约定）
 
 ```bash
-git clone <本仓库> ~/.agents/dev-workflow
-cp ~/.agents/dev-workflow/config.example.md ~/.agents/dev-workflow-config.md
-# 编辑 dev-workflow-config.md 填入你的环境
+git clone <本仓库> ~/.agents/issueflow
+cp ~/.agents/issueflow/config.example.md ~/.agents/issueflow-config.md
+# 编辑 issueflow-config.md 填入你的环境
 ```
 
 ### 方式三：任何其他 AI
@@ -42,7 +45,7 @@ cp ~/.agents/dev-workflow/config.example.md ~/.agents/dev-workflow-config.md
 
 ## 配置（唯一要改的文件）
 
-复制 `config.example.md` 为 `~/.agents/dev-workflow-config.md`，填四个值：看板目录、GitLab 实例、命名空间、glab 路径。
+复制 `config.example.md` 为 `~/.agents/issueflow-config.md`，填四个值：看板目录、GitLab 实例、命名空间、glab 路径。
 
 ## 三条命令
 

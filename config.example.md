@@ -1,6 +1,6 @@
-# dev-workflow 配置
+# issueflow 配置
 
-> 本文件是整套流水线唯一的个性化入口。复制为 `~/.agents/dev-workflow-config.md`（注意：放到用户主目录的 `.agents/` 下，不是本仓库里），按你的环境填写。三条命令运行时第一件事就是读它。
+> 本文件是整套流水线唯一的个性化入口。复制为 `~/.agents/issueflow-config.md`（注意：放到用户主目录的 `.agents/` 下，不是本仓库里），按你的环境填写。三条命令运行时第一件事就是读它。
 
 ```yaml
 # 看板根目录（Obsidian vault 内的文件夹，含 项目清单.md / 总览.md / issues/ / mrs/ / *.base）

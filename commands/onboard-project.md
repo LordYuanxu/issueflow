@@ -3,7 +3,7 @@ description: 把新项目或老项目接入开发流水线（GitLab 备份 + AGE
 argument-hint: <项目本地路径；新项目给计划路径和名字>
 ---
 
-把一个项目接入"issue 驱动 + 看板同步"流水线。**步骤 0**：读 `~/.agents/dev-workflow-config.md` 取配置；登记表在 `<看板目录>/项目清单.md`。
+把一个项目接入"issue 驱动 + 看板同步"流水线。**步骤 0**：读 `~/.agents/issueflow-config.md` 取配置；登记表在 `<看板目录>/项目清单.md`。
 
 ## 1. 判断类型并体检
 

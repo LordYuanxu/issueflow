@@ -6,7 +6,7 @@ description: 同步 GitLab issue 与 MR 到 Obsidian 项目看板（多项目，
 
 ## 0. 读取配置
 
-读 `~/.agents/dev-workflow-config.md`，取得 `<看板目录>`、`<GITLAB_HOST>`、`<gitlab_namespace>`、`<glab 路径>`。配置缺失时提示用户从插件仓库的 config.example.md 复制填写，终止流程。环境设置：`export GITLAB_HOST=<GITLAB_HOST>`；glab 用配置的完整路径或 PATH。
+读 `~/.agents/issueflow-config.md`，取得 `<看板目录>`、`<GITLAB_HOST>`、`<gitlab_namespace>`、`<glab 路径>`。配置缺失时提示用户从插件仓库的 config.example.md 复制填写，终止流程。环境设置：`export GITLAB_HOST=<GITLAB_HOST>`；glab 用配置的完整路径或 PATH。
 
 ## 1. 数据采集
 

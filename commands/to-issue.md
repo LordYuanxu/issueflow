@@ -3,7 +3,7 @@ description: 把草稿/口述需求发布为 GitLab issue（读稿 → 写 spec 
 argument-hint: [笔记名称或路径，可省略；也可直接口述需求]
 ---
 
-把一篇草稿发布成 GitLab issue。**步骤 0**：读 `~/.agents/dev-workflow-config.md` 取 `<看板目录>`、`<GITLAB_HOST>`、`<gitlab_namespace>`、`<glab 路径>`（缺失则提示按 config.example.md 配置并终止）。
+把一篇草稿发布成 GitLab issue。**步骤 0**：读 `~/.agents/issueflow-config.md` 取 `<看板目录>`、`<GITLAB_HOST>`、`<gitlab_namespace>`、`<glab 路径>`（缺失则提示按 config.example.md 配置并终止）。
 
 ## 1. 定位草稿
 
