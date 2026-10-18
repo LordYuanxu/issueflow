@@ -47,7 +47,7 @@ GitLab issue/MR 是唯一事实源，Obsidian 看板是只读投影；数据单�
 
 ## 分支纪律（写入各开发仓库 AGENTS.md，非看板层）
 
-`<issue编号>-<slug>` 命名、一分支一事、MR 必写 Closes、门禁用项目自身校验命令、worktree 仅真并行时用（`.worktrees/<分支名>`，需 gitignore）、trivial 修改走速改通道（无逻辑/不碰契约/≤2 文件 ≤10 行/门禁过 → main 直提）。
+`<issue编号>-<slug>` 命名、一分支一事、MR 必写 Closes、门禁用项目自身校验命令、worktree 由「占用三查」决策（当前分支/工作区状态/24h 活跃分支任一命中即用，`.worktrees/<分支名>` 需 gitignore）、trivial 修改走速改通道（无逻辑/不碰契约/≤2 文件 ≤10 行/门禁过 → main 直提）。
 
 ## 故障排查
 

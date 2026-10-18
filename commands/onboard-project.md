@@ -23,7 +23,7 @@ argument-hint: <项目本地路径；新项目给计划路径和名字>
 - 提交信息沿用项目现状风格（无则 `feat/fix/chore/docs:` + 中文正文）
 - 门禁用项目已有校验命令（test/typecheck；无则"人工确认"）
 - `--remove-source-branch` 删源分支，定期 `git fetch --prune`
-- Worktree 并行开发小节：顺序开发不用 worktree；真并行 `git worktree add .worktrees/<分支名> -b <分支名>`，worktree 内先装依赖跑门禁基线，合并后 remove 收尾；`.gitignore` 补 `.worktrees/`
+- Worktree 并行开发小节：**开工前「占用三查」**（`git branch --show-current` 非 main / `git status --porcelain` 非空 / 24h 内活跃的非 main 分支——任一命中即用 worktree 且不碰主目录，占用分支正是本次 issue 时不重复开发先确认；三查全净才主目录直开）；真并行 `git worktree add .worktrees/<分支名> -b <分支名>`，worktree 内先装依赖跑门禁基线，合并后 remove 收尾；`.gitignore` 补 `.worktrees/`
 - 速改通道（可选）：无逻辑改动、不碰核心契约、≤2 文件 ≤10 行、门禁通过 → main 直提，git log 即追溯；条件守不住转正式流程
 
 AGENTS.md 改动单独提交并 push。
