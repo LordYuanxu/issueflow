@@ -1,0 +1,8 @@
+{
+  "name": "dev-workflow",
+  "version": "0.1.0",
+  "description": "Issue 驱动开发流水线：需求 → spec → GitLab issue → 分支/MR → Obsidian Bases 看板同步。含 /to-issue、/sync-board、/onboard-project 三条命令与看板架构知识。",
+  "author": { "name": "dev-workflow contributors" },
+  "commands": "commands",
+  "skills": "skills"
+}

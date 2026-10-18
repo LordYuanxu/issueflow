@@ -1,0 +1,79 @@
+filters:
+  and:
+    - file.hasTag("issue")
+    - file.ext == "md"
+formulas:
+  状态图标: if(status == "closed", "✅", if(status == "doing", "🔧", "📋"))
+  开放天数: if(status != "closed", (today() - date(created_date)).days.round(0), "")
+properties:
+  issue_number:
+    displayName: 编号
+  repo:
+    displayName: 仓库
+  status:
+    displayName: 状态
+  labels:
+    displayName: 标签
+  summary:
+    displayName: 摘要
+  issue_url:
+    displayName: GitLab 链接
+  created_date:
+    displayName: 创建日期
+  closed_date:
+    displayName: 关闭日期
+  formula.开放天数:
+    displayName: 开放天数
+views:
+  - type: table
+    name: 全部 Issue（含已关闭）
+    groupBy:
+      property: repo
+      direction: ASC
+    order:
+      - file.name
+      - issue_number
+      - repo
+      - status
+      - labels
+      - summary
+      - closed_date
+      - issue_url
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: closed_date
+        direction: DESC
+    columnSize:
+      note.repo: 94
+      note.summary: 247
+  - type: table
+    name: 开放 Issue
+    filters:
+      not:
+        - status == "closed"
+    groupBy:
+      property: repo
+      direction: ASC
+    order:
+      - formula.状态图标
+      - file.name
+      - issue_number
+      - repo
+      - labels
+      - summary
+      - formula.开放天数
+      - issue_url
+    sort: []
+  - type: cards
+    name: 按状态看板
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - issue_number
+      - repo
+      - labels
+      - summary
+      - issue_url

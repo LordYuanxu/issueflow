@@ -1,0 +1,50 @@
+filters:
+  and:
+    - file.hasTag("mr")
+    - file.ext == "md"
+formulas:
+  状态图标: if(status == "merged", "🔀", if(status == "open", "🟢", "❌"))
+properties:
+  mr_number:
+    displayName: 编号
+  repo:
+    displayName: 仓库
+  title:
+    displayName: 标题
+  status:
+    displayName: 状态
+  source_branch:
+    displayName: 源分支
+  merged_date:
+    displayName: 合并日期
+  related_issues:
+    displayName: 关联 Issue
+  mr_url:
+    displayName: MR 链接
+views:
+  - type: table
+    name: 合并记录
+    groupBy:
+      property: repo
+      direction: ASC
+    order:
+      - formula.状态图标
+      - file.name
+      - mr_number
+      - title
+      - source_branch
+      - merged_date
+      - related_issues
+      - mr_url
+  - type: table
+    name: 开放 MR（待合并）
+    filters:
+      and:
+        - status == "open"
+    order:
+      - file.name
+      - mr_number
+      - repo
+      - title
+      - source_branch
+      - mr_url
