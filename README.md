@@ -47,15 +47,26 @@ cp ~/.agents/issueflow/config.example.md ~/.agents/issueflow-config.md
 
 ## 配置（唯一要改的文件）
 
-复制 `config.example.md` 为 `~/.agents/issueflow-config.md`，填四个值：看板目录、GitLab 实例、命名空间、glab 路径。
+复制 `config.example.md` 为 `~/.agents/issueflow-config.md`，填四个值：
+
+| 字段 | 怎么填 |
+|------|--------|
+| `看板目录` | Obsidian vault 里放看板的文件夹绝对路径（还没有就建一个） |
+| `gitlab_host` | 你的 GitLab 域名（浏览器地址栏 `https://` 后面的部分） |
+| `gitlab_namespace` | GitLab 用户名或组名（个人主页 URL 里 `/users/` 后面那串） |
+| `glab_path` | 终端能直接跑 `glab --version` 就留空 `""`；否则填完整路径 |
+
+> 每个字段的详细查找方法见 `config.example.md` 内的对照表。`~` 指你的用户主目录（Windows：`C:\Users\<用户名>`）。
 
 ## 三条命令
 
 | 命令 | 作用 |
 |------|------|
 | `/onboard-project <路径>` | 项目接入：体检备份 → AGENTS.md 纪律（worktree/速改通道）→ 分支清理 → 注册 → 历史回填 |
-| `/to-issue [笔记]` | 需求入口：spec 归档 → 拆解清单**经确认** → 批量建 issue → 回链 |
+| `/to-issue [笔记]` | 需求入口：spec 归档 → 拆解清单**经确认** → 批量建 issue（审查/优化类可打 P0-P2 优先级标签）→ 回链 |
 | `/sync-board` | 进度出口：多项目 issue/MR/分支/worktree 采集 → 笔记与对应表更新 → 增量简报（可挂 cron 每日运行） |
+
+**典型用法**：单个需求给笔记名或直接口述；审查/体验后的整批优化项一次投喂——`/to-issue，把这次审查的优化清单全部落成 issue，按优先级打标签，依赖顺序写进描述`。先把需求全部记录进看板，再按 P0→P2 逐个开发，好想法不再散落在笔记和对话里。
 
 ## 设计原则
 
