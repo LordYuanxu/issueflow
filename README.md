@@ -58,10 +58,11 @@ cp ~/.agents/issueflow/config.example.md ~/.agents/issueflow-config.md
 
 > 每个字段的详细查找方法见 `config.example.md` 内的对照表。`~` 指你的用户主目录（Windows：`C:\Users\<用户名>`）。
 
-## 三条命令
+## 四条命令
 
 | 命令 | 作用 |
 |------|------|
+| `/idea <一句话>` | 想法捕获：零摩擦写入 Inbox 笔记，不整理不建卡不追问 |
 | `/onboard-project <路径>` | 项目接入：体检备份 → AGENTS.md 纪律（worktree/速改通道）→ 分支清理 → 注册 → 历史回填 |
 | `/to-issue [笔记]` | 需求入口：spec 归档 → 拆解清单**经确认** → 批量建 issue（审查/优化类可打 P0-P2 优先级标签）→ 回链 |
 | `/sync-board` | 进度出口：多项目 issue/MR/分支/worktree 采集 → 笔记与对应表更新 → 增量简报（可挂 cron 每日运行） |

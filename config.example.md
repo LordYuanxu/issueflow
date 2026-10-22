@@ -16,6 +16,9 @@ gitlab_namespace: your-username
 
 # glab 可执行文件完整路径；已加入 PATH 则留空
 glab_path: ""
+
+# 想法捕获目录（/idea 命令写入处；留空则用 <看板目录> 所在 vault 的 00-Inbox/）
+Inbox 目录: ""
 ```
 
 ## 每个字段怎么填

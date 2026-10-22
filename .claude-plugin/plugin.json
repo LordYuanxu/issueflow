@@ -1,7 +1,7 @@
 {
   "name": "issueflow",
   "version": "0.1.0",
-  "description": "一句话需求，AI 建卡开发合并，进度自动写进你的笔记。Issue 驱动开发流水线：需求 → spec → GitLab issue → 分支/MR → Obsidian Bases 看板同步。",
+  "description": "一句话需求，AI 建卡开发合并，进度自动写进你的笔记。Issue 驱动开发流水线：/idea 捕获想法 → /to-issue 建 issue → 分支/MR → /sync-board 同步 Obsidian 看板。",
   "author": { "name": "issueflow contributors" },
   "commands": "commands",
   "skills": "skills"
